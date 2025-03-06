@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Year 8 Initial Ideas</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Comic Sans MS', cursive, sans-serif; /* Child-friendly font */
+        background-color: #f5f5f5;
+        padding: 10px;
+        line-height: 1.3; /* Improved line height for readability */
+        color: #333; /* Softer text color */
+    }
+
+    .gallery-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        color: #e91e63;
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 2.5em;
+        text-shadow: 3px 3px 0 #ffeb3b;
+    }
+
+    h2 {
+        color: #555;
+        margin: 5px 0 10px;
+        font-size: 1.8em;
+        text-align: center; /* Keep headings centered */
+    }
+
+    .intro {
+        color: #666;
+        margin-bottom: 10px;
+        font-style: italic;
+        text-align: left; /* Left-align intro text */
+        font-size: 1.1em; /* Slightly larger font size */
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .gallery-item {
+        width: calc(50% - 20px); /* 2 columns for PC users */
+        background: white;
+        padding: 15px; /* Slightly more padding */
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
+
+    .gallery-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+        display: block;
+    }
+
+    .image-caption {
+        margin-top: 12px; /* More spacing */
+        text-align: left; /* Left-align captions */
+        color: #444; /* Slightly darker for better readability */
+        font-size: 1em; /* Slightly larger font size */
+        line-height: 1.5; /* Improved line height */
+    }
+
+    /* Pop Art Styled Elements */
+    h1 {
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #e91e63;
+        text-shadow: 3px 3px 0 #ffeb3b;
+    }
+
+    /* Lightbox Styles */
+    .lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 8px;
+    }
+
+    .lightbox.active {
+        display: flex;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    /* Media queries for responsiveness */
+    @media (max-width: 768px) {
+        .gallery-item {
+            width: calc(50% - 20px); /* 2 columns on medium screens */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .gallery-item {
+            width: 100%; /* 1 column on small screens */
+        }
+
+        h1 {
+            font-size: 2em; /* Smaller heading on mobile */
+        }
+
+        h2 {
+            font-size: 1.5em; /* Smaller subheading on mobile */
+        }
+
+        .intro {
+            font-size: 1em; /* Smaller intro text on mobile */
+        }
+
+        .image-caption {
+            font-size: 0.9em; /* Smaller captions on mobile */
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="gallery-container">
+        <!-- Year 8 Section -->
+        <h2>Year 8 Festive Photo Frame Project: Initial Ideas Examples</h2>
+        <div class="intro">
+            The Dragon Boat Festival is a significant Chinese cultural event celebrated to honor the ancient righteous poet Qu Yuan. It symbolizes truthfulness, bravery, and loyalty, with dragon boat races and zongzi (rice dumplings) being central to the festivities.
+        </div>
+        <div class="gallery" id="gallery-year8">
+            <div class="gallery-item">
+                <img src="filename0.jpg" alt="Year 8 Photo Frame Initial Idea 1">
+                <div class="image-caption">
+                    A majestic depiction of a dragon boat from the Dragon Boat Festival. The scales, tails, and horns are emphasized to create a powerful and regal visual, capturing the spirit of the festival.
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="filename1.jpg" alt="Year 8 Photo Frame Initial Idea 2">
+                <div class="image-caption">
+                    An abstract interpretation of the Chinese character for 'dragon' transformed into a boat-like shape, riding dynamic waves. This design blends traditional calligraphy with modern artistic expression.
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="filename2.jpg" alt="Year 8 Photo Frame Initial Idea 3">
+                <div class="image-caption">
+                    Wave patterns form the body of a dragon, with the creature soaring into the sky atop a massive wave. This design symbolizes strength and freedom, inspired by the festival's energy.
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="filename3.jpg" alt="Year 8 Photo Frame Initial Idea 4">
+                <div class="image-caption">
+                    A festive design featuring the Chinese characters for 'Dragon Boat Festival,' adorned with hearts and zongzi (traditional rice dumplings). This highlights the festival's focus on family and togetherness.
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Lightbox Pop-up -->
+    <div class="lightbox" id="lightbox">
+        <span class="close-btn" id="close-btn">&times;</span>
+        <img id="lightbox-img" src="" alt="Zoomed Image">
+    </div>
+
+    <!-- Masonry Library -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <!-- imagesLoaded Library -->
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script>
+        // Initialize Masonry for the Year 8 gallery
+        var galleryYear8 = document.querySelector('#gallery-year8');
+        var masonryYear8 = new Masonry(galleryYear8, {
+            itemSelector: '.gallery-item',
+            columnWidth: '.gallery-item',
+            gutter: 20,
+            fitWidth: true
+        });
+
+        // Re-layout Masonry after images load
+        imagesLoaded(galleryYear8, function() {
+            masonryYear8.layout();
+        });
+
+        // Lightbox Functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.getElementById('close-btn');
+
+        // Open lightbox when an image is clicked
+        document.querySelectorAll('.gallery-item img').forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.classList.add('active');
+                lightboxImg.src = img.src;
+            });
+        });
+
+        // Close lightbox when close button is clicked
+        closeBtn.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+
+        // Close lightbox when clicking outside the image
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
