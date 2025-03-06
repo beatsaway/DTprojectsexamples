@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DT projects examples</title>
+    <meta name="description" content="Explore creative examples of Year 8 and Year 9 DT projects, including Festive Photo Frames and Pop Art Clocks.">
+    <title>DT Projects Examples - Year 8 & Year 9</title>
     <style>
         * {
             margin: 0;
@@ -17,15 +18,18 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             text-align: center;
+            padding: 20px;
         }
 
         .container {
             background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
         }
 
         h1 {
@@ -39,29 +43,59 @@
             color: #555;
             font-size: 1.2em;
             margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
 
         a {
             display: inline-block;
             background-color: #e91e63;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border-radius: 5px;
             text-decoration: none;
             font-size: 1.2em;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
         a:hover {
             background-color: #d81b60;
+            transform: translateY(-2px);
+        }
+
+        a:active {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            a {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
- 
-        <p>2025 Examples of creative initial ideas for the Festive Photo Frame (Year 8) and Pop Art Clock (Year 9) projects.</p>
-        <a href="2025DT/initial.html">View</a>
+        <h1>DT Projects Examples</h1>
+        <p>Explore creative examples of initial ideas for the <strong>Festive Photo Frame (Year 8)</strong> and <strong>Pop Art Clock (Year 9)</strong> projects.</p>
+        <div class="links">
+            <a href="2025DT/y8examples.html">View Year 8 Examples</a>
+            <a href="2025DT/y9examples.html">View Year 9 Examples</a>
+        </div>
     </div>
 </body>
 </html>
